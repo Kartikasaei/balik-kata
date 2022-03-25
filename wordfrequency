@@ -35,4 +35,32 @@ int main (){
         }
     }
     cout<<nmuncul<<" "<<spasi;
+    
+    /* ATAU BISA JUGA DENGAN 
+    ========================
+    
+    #include <iostream>
+#include <cmath>
+using namespace std;
+ 
+int main(int argc, char const *argv[]){  
+    char str, x;
+    cin>>x;
+    int a = 0 , spc = 0;
+     while (cin.get(str)){
+        if(str == x){
+            a++;
+        }
+        if(str == ' '){
+            spc++;
+        }
+        if(str == '.'){
+            break;
+        }
+    }
+    cout<<a<<" "<<spc<<endl;
+    return 0;
+}
+*/
+
 }
