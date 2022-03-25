@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+/*Buatlah sebuah program yang menerima input c-string sebanyak n. Program akan memeriksa apakah C-String yang diinputkan seluruhnya adalah huruf kapital atau bukan.
+Ukuran C-String maksimum adalah 20 karakter. Apabila seluruh karakter adalah huruf besar maka tampilkan “Besar” jika tidak maka tampilkan “Kecil” */
+
+int main(){
+    
+	int n;
+    cin>>n;
+    char kata[n][20];
+    char cek[n][20];
+    
+    for(int i=0; i<=n; i++){
+    	cin.getline(kata[i], 20);
+    }
+	for(int i=0; i<=n; i++){
+    	for(int j=0; j < 20; j++){
+    		cek[i][j]= (char)toupper(kata[i][j]);
+		}
+    }
+    
+	for(int i=1; i<=n; i++){
+	     if(strcmp(kata[i], cek[i]) !=0 ){
+			cout<<"Kecil"<<endl;
+		}else{
+			cout<<"Besar"<<endl;
+		}
+	}
+	
+    return 0;
+}
