@@ -1,0 +1,90 @@
+#include <iostream>
+#include <cstdlib>
+#include <cstring>
+using namespace std;
+
+//cstring - PETRUK RESPONSI - 25/3/2022
+
+int main(){
+	/*PERBEDAAN ARRAY BIASA DENGAN ARRAY CSTRING : ada \0, 
+	kalo pake pointer lebih menghemat memori, pointer gabisa pake sizeof*/
+	
+	cout<<"array biasa"<<endl;
+	
+	char arr[4][9]={ "sun", "ourearth", "sky", "mars"};
+					
+	for (int i=0; i<4; i++){
+		cout<<"size index "<<i<<": "<<strlen(arr[i])<<endl;
+	}
+	
+	for (int i=0; i<4; i++){
+		cout<<"size asli index "<<i<<": "<<sizeof(arr[i])<<endl;
+	}
+	
+	cout<<endl;
+	cout<<"total size array ini di memori : "<<sizeof(arr)<<endl;
+	cout<<endl;
+	
+	/*fungsi-fungsi di cstring (263 buku cpp)
+	1. tolower : mengubah setiap karakter menjadi huruf kecil
+	2. toupper : mengubah setiap karakter menjadi huruf besar
+	3. strcpy : menyalin sebuah karakter string ke string lainnya
+	4. isalnum : ngecek alphabet/bukan, output berupa trur/false
+	5. strcat : menggabungkan string satu dengan yang lainnya
+	
+	*/
+	
+	char b[]= "kartika";
+	cout<<b<<endl;
+	
+	for (int i=0; i<strlen(b); i++){
+		cout<<(char)toupper(b[i]);
+	}
+	
+	cout<<endl;
+	cout<<endl;
+	
+	char c[]= "PETRUK";
+	cout<<c<<endl;
+	
+	for (int i=0; i<strlen(c); i++){
+		cout<<(char)tolower(c[i]);
+	}
+	
+	//2 dimensi
+	cout<<endl;
+	cout<<endl;
+	
+	for(int i=0; i<4; i++){
+		for(int j=0; j<9; j++){
+			arr[i][j]=(char)toupper(arr[i][j]);
+		}
+	}
+	for(int i=0; i<4; i++){
+		cout<<arr[i]<<endl;
+	}
+	
+	//cout<<(char)toupper(*(*(arr)));
+	cout<<endl;
+	cout<<endl;
+	
+	//FUNGSI ISALNUM, ISALPHA, ISDIGIT
+	/*char d;
+	int angka = 0, huruf=0, angkaHuruf=0;
+	
+	while (cin.get(d)){
+		if(isalnum(d)) {angkaHuruf++;}
+		if (d =='\n') {break;}
+		else if (isalpha(d)) {huruf++;}
+		else if(isdigit(d)) {angka++;}
+	}
+	*/
+	
+	//STRCPY
+	
+	const char *e = "contoh";
+	char *eCopy;
+	
+	strcpy(eCopy, e);
+	cout<<e<<" = "<<eCopy<<endl;
+}
