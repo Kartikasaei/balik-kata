@@ -30,4 +30,39 @@ int main(){
 	}
 	
     return 0;
+    
+    /* ATAU BISA JUGA DENGAN 
+    ========================
+#include <iostream>
+#include <cstring>
+#include <stdlib.h>
+using namespace std;
+
+
+bool upper(char* str){
+    for(int i=0;i<(int)strlen(str);i++){
+        if(islower(str[i])){
+            return false;
+        }
+    }
+    return true;
+}
+
+int main() {
+    int n;
+    cin>>n;
+    cin.ignore(1,'\n');
+    char str[n][20];
+    for(int i=0;i<n;i++){
+        cin.getline(str[i], 20);
+    }
+    for(int i=0; i<n; i++){
+        if(upper(str[i])){
+            cout << "Besar" << endl;
+        }else{
+            cout << "Kecil" << endl;
+        }
+    }
+}
+*/
 }
