@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+/* Buatlah sebuah program untuk menghitung frekuensi sebuah karakter yang diinputkan oleh user dan frekuensi spasi yang muncul. 
+String yang dihitung diakhiri dengan tanda titik (.). Jika ada kalimat setelah tanda titik maka diabaikan.
+
+Input :
+Input terdiri dari 2 baris:
+1. Baris pertama merupakan satu buah char yang harus dihitung frekuensi kemunculannya pada string utama.
+2. Baris kedua berisi string utama yang diakhiri oleh tanda titik (.)'
+
+Output:
+Output terdiri dari 2 buah integer yang dipisahkan dengan spasi.
+Integer pertama menyatakan frekuensi karakter yang muncul, sedangkan integer kedua menyatakan frekuensi spasi yang muncul. */
+
+int main (){
+    char kata [50];
+    char huruf;
+    int nmuncul=0;
+    int spasi=0;
+    
+    cin>>huruf;
+    cin.ignore(256,'\n');
+    cin.getline(kata, 50, '\n');
+    
+    for (int i=0; true; i++)
+        if (kata[i] == '.'){
+            break;
+        }else{
+            if(kata[i] == huruf || kata[i] == huruf){
+				nmuncul++;
+            }else if(kata[i] == ' '){
+                spasi++;
+        }
+    }
+    cout<<nmuncul<<" "<<spasi;
+}
