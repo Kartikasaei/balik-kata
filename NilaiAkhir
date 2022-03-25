@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+//KARTIKA SARI A 2117051039
+//Program Nilai Akhir mahasiswa Unila
+
+int main(){
+	int na;
+	cout<<"Nilai Mahasiswa = ";
+	cin>>na;
+
+	if (na>= 76){
+		cout<<"A"<<endl;
+		cout<<"Lulus";
+		}else if (na>=71 && na<76){
+			cout<<"B+"<<endl;
+			cout<<"Lulus";
+		}else if (na>=66 && na<71){
+			cout<<"B"<<endl;
+			cout<<"Lulus";
+		}else if (na>=61 && na<66){
+			cout<<"C+"<<endl;
+			cout<<"Lulus";
+		}else if (na>=56 && na<61){
+			cout<<"C"<<endl;
+			cout<<"Lulus";
+		}else if (na>=50 && na<56){
+			cout<<"D"<<endl;
+			cout<<"Lulus Bersyarat";
+		}else if (na<50){
+			cout<<"E"<<endl;
+			cout<<"Tidak Lulus";
+		}
+	
+	return 0;
+}
