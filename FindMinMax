@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+//KARTIKA SARI A 2117051039
+//Program menentukan bilangan terbesar dan terkecil dari n bilangan inputan
+
+int main(){
+	
+	int Max, Min, n, i;
+	int c[n];
+	cout<<"masukkan nilai n : ";
+	cin>>n;
+	
+	//looping untuk input n
+	for (i=1; i<n; i++){
+		cout<<"n ke-"<<c[i]<<endl;
+		cin>>c[i];
+	}
+	
+	//menentukan bilangan terbesar
+	Max=c[0];
+	for (i=0; i<n; i++){
+		if(c[i]>Max){
+			Max=c[i];
+		}
+	}
+	cout<<"Max = "<<Max;
+	
+	//menentukan bilangan terkecil
+	Min= c[0];
+	  for (int i = 0; i<n; i++){
+	  	if (c[i]<Min){
+	  	    Min = c[i];
+	  	}
+	  }
+  cout<<"Min = "<<Min;
+	
+	return 0;
+}
