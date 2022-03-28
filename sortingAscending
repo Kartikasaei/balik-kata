@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+//28-3-2022
+
+void bubbleSort(int data[], int n){
+    int temp;
+ for (int i = 0; i < n-1; i++){
+    for (int j = i+1; j < n; j++){
+        if (Arr[i]>Arr[j]){
+            temp = Arr[i];
+            Arr[i]=Arr[j];
+            Arr[j]=temp;
+        }   
+        
+    }
+    }
+}
+
+int main(){
+	
+	int jumlah;
+    cout<<"Input jumlah elemen array : ";
+    cin>>jumlah;
+    int Arr[jumlah];
+    for (int i = 0; i < jumlah; i++){
+        cout<<"Nilai elemen ke-"<<i<<" = ";
+        cin>>Arr[i];
+    }cout<<endl;
+
+    cout<<"Data belum terurut : "<<endl;
+    for (int i = 0; i < jumlah; i++){
+        cout<<Arr[i]<<" ";
+    }cout<<endl;
+
+    bubbleSort(Arr,jumlah);
+    cout<<"Data sudah terurut  : "<<endl;
+    for (int i = 0; i < jumlah; i++){
+        cout<<Arr[i]<<" ";
+    }cout<<endl;
+        
+}
