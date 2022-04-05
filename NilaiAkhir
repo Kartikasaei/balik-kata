@@ -27,7 +27,7 @@ int main(){
 		}else if (na>=50 && na<56){
 			cout<<"D"<<endl;
 			cout<<"Lulus Bersyarat";
-		}else if (na<50){
+		}else{
 			cout<<"E"<<endl;
 			cout<<"Tidak Lulus";
 		}
